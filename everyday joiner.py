@@ -3,6 +3,8 @@ from pynput.mouse import Controller, Button
 import keyboard
 from time import sleep
 
+path = __file__
+path = path.replace('everyday joiner.py', '') + "everyday joiner.txt"
 
 def join(subject):
     subject = str(subject)
@@ -29,7 +31,7 @@ def join(subject):
     sleep(0.1)
 
 
-info = open("everyday joiner.txt", 'r+', encoding='ascii')
+info = open(path, 'r+', encoding='ascii')
 info = info.readlines()
 infostr = ''
 for i in range(len(info)):
